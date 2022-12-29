@@ -1,3 +1,15 @@
-from django.shortcuts import render
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from rest_framework import status
 
-# Create your views here.
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from .models import Post
+from .serializers import *
+
+
+@api_view(['GET', 'POST'])
+def customers_list(request):
+
+    if request.method == 'GET':
+        return Response({'data': 1})
+

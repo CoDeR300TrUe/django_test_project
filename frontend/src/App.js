@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   useEffect(() => {
-    axios.get('http://localhost:8000/').then((data) => {
+    axios.get('http://localhost:8000/api/customers').then((data) => {
       console.log(data);
     })
   }, [])
